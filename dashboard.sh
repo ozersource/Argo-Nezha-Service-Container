@@ -539,7 +539,7 @@ IS_DOCKER=0
 EOF
 
   # 生成 backup.sh 文件的步骤2 - 在线获取 template/bakcup.sh 模板生成完整 backup.sh 文件
-  wget -qO- ${GH_PROXY}https://raw.githubusercontent.com/fscarmen2/Argo-Nezha-Service-Container/main/template/backup.sh | sed '1,/^########/d' >> ${WORK_DIR}/backup.sh
+  wget -qO- ${GH_PROXY}https://raw.githubusercontent.com/ozersource/Argo-Nezha-Service-Container/main/template/backup.sh | sed '1,/^########/d' >> ${WORK_DIR}/backup.sh
 
   if [[ -n "$GH_BACKUP_USER" && -n "$GH_REPO" && -n "$GH_PAT" ]]; then
     # 生成还原数据脚本
